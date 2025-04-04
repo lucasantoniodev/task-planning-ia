@@ -1,0 +1,5 @@
+title,description,estimation
+"Login Page","Criar uma página de login com autenticação",3
+"Dashboard","Criar dashboard com gráficos e métricas",5
+"Refatoração","Refatorar código legado",8
+"API de Pagamento","Implementar API para pagamentos",5
