@@ -9,11 +9,12 @@ from src.modules.artificial_intelligence.services.create_ai_model_service import
 from src.modules.artificial_intelligence.services.get_all_tasks_service import GetAllTasksService
 
 
-def main():
+def train_model():
     get_all_tasks_service = GetAllTasksService()
     tasks = get_all_tasks_service.execute()
+    data = [[task.description, task.points] for task in tasks]
 
-    df = pd.DataFrame(tasks, columns=["description", "points"])
+    df = pd.DataFrame(data, columns=["description", "points"])
 
     vectorizer = TfidfVectorizer()
     x = vectorizer.fit_transform(df["description"])
@@ -35,4 +36,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    train_model()
