@@ -7,7 +7,7 @@ path = "/tasks"
 summary = "Rota para buscar estimativa sugerida pela inteligência artificial"
 
 
-@router.post(path, response_model=list[TaskResponseDTO], summary=summary)
+@router.post(path, response_model=list[TaskResponseDTO], summary=summary, status_code=201)
 def execute(tasks: list[CreateTaskRequestDTO]) -> list[TaskResponseDTO]:
     service = CreateTasksService()
     tasks = service.execute(tasks)

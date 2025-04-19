@@ -19,7 +19,7 @@ class TaskRepository:
                  tasks_request]
         self.db.add_all(tasks)
         self.db.commit()
-        return self.get_all()
+        return tasks
 
     def get_all(self):
         tasks = self.db.query(TaskEntity.id, TaskEntity.description, TaskEntity.points).all()
