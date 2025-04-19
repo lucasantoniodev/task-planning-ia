@@ -1,7 +1,18 @@
-python -m venv venv                  
+# Serviço para estimativa de atividades com IA
 
-.\python-ia-linear-regression\Scripts\Activate.ps1 <- veja qual a extensão para seu terminal
+## Instruções para execução do projeto
 
-pip install fastapi uvicorn scikit-learn pandas numpy 
+### 1º Criar ambiente virtual
+    python -m venv .venv
 
-para rodar a api na pasta src: uvicorn app:app --host 0.0.0.0 --port 8000     
+### 2º Inciar ambiente virtual no terminal
+    .\.venv\Scripts\activate 
+
+### 3º Instalar dependências
+    pip install -r requirements.txt
+
+### 4º Treinar inteligência artificial
+    python ./src/train.py
+
+### 5º Iniciar servidor
+    python main.py
