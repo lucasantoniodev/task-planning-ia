@@ -1,13 +1,15 @@
 import pickle
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+from src.modules.artificial_intelligence.services.get_latest_ai_model_service import GetLatestAiModelService
+
 
 class GetEstimatesService:
-    def __init__(self, model_path: str = "model.pkl", vectorizer_path: str = "vectorizer.pkl"):
-        self.model: any = pickle.load(open(model_path, "rb"))
-        self.vectorizer: TfidfVectorizer = pickle.load(open(vectorizer_path, "rb"))
+    def __init__(self):
+        self.get_latest_ai_model_service = GetLatestAiModelService()
 
     def execute(self, description: str) -> float:
-        x = self.vectorizer.transform([description])
-        prediction = self.model.predict(x)[0]
+        vectorizer, model = self.get_latest_ai_model_service.execute()
+        x = vectorizer.transform([description])
+        prediction = model.predict(x)[0]
         return round(prediction, 2)

@@ -1,0 +1,8 @@
+.idea
+.venv
+
+src/modules/artificial_intelligence/process/vectorizer.pkl
+src/modules/artificial_intelligence/process/model.pkl
+
+.env
+

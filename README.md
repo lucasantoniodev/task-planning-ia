@@ -11,8 +11,11 @@
 ### 3º Instalar dependências
     pip install -r requirements.txt
 
-### 4º Treinar inteligência artificial
-    python ./src/train.py
+### 4º Rodar seeds
+    python -m src.config.database.seeds
+
+### 5º Treinar inteligência artificial
+     python -m src.modules.artificial_intelligence.process.train
 
 ### 5º Iniciar servidor
     python main.py
