@@ -1,7 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 
-from src.config.database.migration import run_migrations
+from src.config.database.migrations import run_migrations
 from src.modules import artificial_intelligence
 
 run_migrations()

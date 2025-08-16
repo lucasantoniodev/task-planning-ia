@@ -6,5 +6,6 @@ def run_seeds():
     create_task_seeds()
     print("Seeds executadas com sucesso!")
 
+
 if __name__ == "__main__":
     run_seeds()

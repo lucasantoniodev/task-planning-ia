@@ -11,11 +11,17 @@
 ### 3º Instalar dependências
     pip install -r requirements.txt
 
-### 4º Rodar seeds
+### 4º Subir instância do postgres no docker
+    docker compose up --build
+
+### 5º Rodar migrations
+    python -m src.config.database.migrations
+
+### 6º Rodar seeds
     python -m src.config.database.seeds
 
-### 5º Treinar inteligência artificial
+### 7º Treinar inteligência artificial
      python -m src.modules.artificial_intelligence.process.train
 
-### 5º Iniciar servidor
-    python main.py
+### 8º Iniciar servidor
+    python -m src.main

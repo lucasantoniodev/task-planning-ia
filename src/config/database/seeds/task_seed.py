@@ -1,6 +1,7 @@
 from src.config.database.dependecies import get_db
 from src.modules.artificial_intelligence.entities.task_entity import TaskEntity
 
+
 def create_task_seeds():
     db = next(get_db())
 
